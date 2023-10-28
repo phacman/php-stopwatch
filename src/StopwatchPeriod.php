@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the Symfony package.
  *
@@ -9,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch;
+namespace PhacMan\Stopwatch;
 
 /**
  * Represents an Period for an Event.
@@ -37,7 +39,7 @@ class StopwatchPeriod
     /**
      * Gets the relative time of the start of the period in milliseconds.
      */
-    public function getStartTime(): int|float
+    public function getStartTime() : int|float
     {
         return $this->start;
     }
@@ -45,7 +47,7 @@ class StopwatchPeriod
     /**
      * Gets the relative time of the end of the period in milliseconds.
      */
-    public function getEndTime(): int|float
+    public function getEndTime() : int|float
     {
         return $this->end;
     }
@@ -53,7 +55,7 @@ class StopwatchPeriod
     /**
      * Gets the time spent in this period in milliseconds.
      */
-    public function getDuration(): int|float
+    public function getDuration() : int|float
     {
         return $this->end - $this->start;
     }
@@ -61,12 +63,12 @@ class StopwatchPeriod
     /**
      * Gets the memory usage in bytes.
      */
-    public function getMemory(): int
+    public function getMemory() : int
     {
         return $this->memory;
     }
 
-    public function __toString(): string
+    public function __toString() : string
     {
         return sprintf('%.2F MiB - %d ms', $this->getMemory() / 1024 / 1024, $this->getDuration());
     }

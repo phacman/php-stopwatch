@@ -9,10 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch\Tests;
+namespace PhacMan\Stopwatch\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Stopwatch\StopwatchPeriod;
+use PhacMan\Stopwatch\StopwatchPeriod;
+use const PHP_FLOAT_EPSILON;
 
 class StopwatchPeriodTest extends TestCase
 {
@@ -40,7 +41,7 @@ class StopwatchPeriodTest extends TestCase
     public function testGetDuration($start, $end, $useMorePrecision, $duration)
     {
         $period = new StopwatchPeriod($start, $end, $useMorePrecision);
-        $this->assertEqualsWithDelta($duration, $period->getDuration(), \PHP_FLOAT_EPSILON);
+        $this->assertEqualsWithDelta($duration, $period->getDuration(), PHP_FLOAT_EPSILON);
     }
 
     public static function provideTimeValues()

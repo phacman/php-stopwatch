@@ -554,7 +554,7 @@ Victor Berchet (1):
       2012-11-10 19:55:34 | 37c1f8d | [Stopwatch] Get the "real size" used & minor tweaks
 
 Vladimir Reznichenko (1):
-      2015-05-29 20:14:48 | 86c6cc6 | Php Inspections (EA Extended):     - resolved possible PHP Fatal in \Symfony\Component\BrowserKit\Cookie::__toString     -resolved implicit magic methods calls     -resolved callable name case mismatches
+      2015-05-29 20:14:48 | 86c6cc6 | Php Inspections (EA Extended):     - resolved possible PHP Fatal in \PhacMan\BrowserKit\Cookie::__toString     -resolved implicit magic methods calls     -resolved callable name case mismatches
 
 Yonel Ceruto (1):
       2019-07-08 15:57:32 | 5c288f8 | Fix missing deprecations

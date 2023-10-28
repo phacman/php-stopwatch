@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the Symfony package.
  *
@@ -9,8 +11,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch;
+namespace PhacMan\Stopwatch;
 
+use function count;
+use LogicException;
 use Symfony\Contracts\Service\ResetInterface;
 
 // Help opcache.preload discover always-needed symbols
@@ -47,7 +51,7 @@ class Stopwatch implements ResetInterface
     /**
      * @return Section[]
      */
-    public function getSections(): array
+    public function getSections() : array
     {
         return $this->sections;
     }
@@ -59,14 +63,14 @@ class Stopwatch implements ResetInterface
      *
      * @return void
      *
-     * @throws \LogicException When the section to re-open is not reachable
+     * @throws LogicException When the section to re-open is not reachable
      */
     public function openSection(string $id = null)
     {
         $current = end($this->activeSections);
 
         if (null !== $id && null === $current->get($id)) {
-            throw new \LogicException(sprintf('The section "%s" has been started at an other level and cannot be opened.', $id));
+            throw new LogicException(sprintf('The section "%s" has been started at an other level and cannot be opened.', $id));
         }
 
         $this->start('__section__.child', 'section');
@@ -83,14 +87,14 @@ class Stopwatch implements ResetInterface
      *
      * @return void
      *
-     * @throws \LogicException When there's no started section to be stopped
+     * @throws LogicException When there's no started section to be stopped
      */
     public function stopSection(string $id)
     {
         $this->stop('__section__');
 
-        if (1 == \count($this->activeSections)) {
-            throw new \LogicException('There is no started section to stop.');
+        if (1 === count($this->activeSections)) {
+            throw new LogicException('There is no started section to stop.');
         }
 
         $this->sections[$id] = array_pop($this->activeSections)->setId($id);
@@ -100,7 +104,7 @@ class Stopwatch implements ResetInterface
     /**
      * Starts an event.
      */
-    public function start(string $name, string $category = null): StopwatchEvent
+    public function start(string $name, string $category = null) : StopwatchEvent
     {
         return end($this->activeSections)->startEvent($name, $category);
     }
@@ -108,7 +112,7 @@ class Stopwatch implements ResetInterface
     /**
      * Checks if the event was started.
      */
-    public function isStarted(string $name): bool
+    public function isStarted(string $name) : bool
     {
         return end($this->activeSections)->isEventStarted($name);
     }
@@ -116,7 +120,7 @@ class Stopwatch implements ResetInterface
     /**
      * Stops an event.
      */
-    public function stop(string $name): StopwatchEvent
+    public function stop(string $name) : StopwatchEvent
     {
         return end($this->activeSections)->stopEvent($name);
     }
@@ -124,7 +128,7 @@ class Stopwatch implements ResetInterface
     /**
      * Stops then restarts an event.
      */
-    public function lap(string $name): StopwatchEvent
+    public function lap(string $name) : StopwatchEvent
     {
         return end($this->activeSections)->stopEvent($name)->start();
     }
@@ -132,7 +136,7 @@ class Stopwatch implements ResetInterface
     /**
      * Returns a specific event by name.
      */
-    public function getEvent(string $name): StopwatchEvent
+    public function getEvent(string $name) : StopwatchEvent
     {
         return end($this->activeSections)->getEvent($name);
     }
@@ -142,7 +146,7 @@ class Stopwatch implements ResetInterface
      *
      * @return StopwatchEvent[]
      */
-    public function getSectionEvents(string $id): array
+    public function getSectionEvents(string $id) : array
     {
         return isset($this->sections[$id]) ? $this->sections[$id]->getEvents() : [];
     }

@@ -9,12 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch\Tests;
+namespace PhacMan\Stopwatch\Tests;
 
+use LogicException;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Stopwatch\Section;
-use Symfony\Component\Stopwatch\Stopwatch;
-use Symfony\Component\Stopwatch\StopwatchEvent;
+use PhacMan\Stopwatch\Section;
+use PhacMan\Stopwatch\Stopwatch;
+use PhacMan\Stopwatch\StopwatchEvent;
+use ReflectionProperty;
 
 /**
  * StopwatchTest.
@@ -64,10 +66,10 @@ class StopwatchTest extends TestCase
     {
         $stopwatch = new Stopwatch();
 
-        $sections = new \ReflectionProperty(Stopwatch::class, 'sections');
+        $sections = new ReflectionProperty(Stopwatch::class, 'sections');
         $section = $sections->getValue($stopwatch);
 
-        $events = new \ReflectionProperty(Section::class, 'events');
+        $events = new ReflectionProperty(Section::class, 'events');
 
         $events->setValue(end($section), ['foo' => new StopwatchEvent(microtime(true) * 1000)]);
 
@@ -87,14 +89,14 @@ class StopwatchTest extends TestCase
 
     public function testUnknownEvent()
     {
-        $this->expectException(\LogicException::class);
+        $this->expectException(LogicException::class);
         $stopwatch = new Stopwatch();
         $stopwatch->getEvent('foo');
     }
 
     public function testStopWithoutStart()
     {
-        $this->expectException(\LogicException::class);
+        $this->expectException(LogicException::class);
         $stopwatch = new Stopwatch();
         $stopwatch->stop('foo');
     }
@@ -158,7 +160,7 @@ class StopwatchTest extends TestCase
 
     public function testReopenANewSectionShouldThrowAnException()
     {
-        $this->expectException(\LogicException::class);
+        $this->expectException(LogicException::class);
         $stopwatch = new Stopwatch();
         $stopwatch->openSection('section');
     }

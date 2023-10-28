@@ -9,10 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch\Tests;
+namespace PhacMan\Stopwatch\Tests;
 
+use LogicException;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Stopwatch\StopwatchEvent;
+use PhacMan\Stopwatch\StopwatchEvent;
 
 /**
  * StopwatchEventTest.
@@ -122,7 +123,7 @@ class StopwatchEventTest extends TestCase
 
     public function testStopWithoutStart()
     {
-        $this->expectException(\LogicException::class);
+        $this->expectException(LogicException::class);
         $event = new StopwatchEvent(microtime(true) * 1000);
         $event->stop();
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the Symfony package.
  *
@@ -9,7 +11,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Stopwatch;
+namespace PhacMan\Stopwatch;
+
+use function count;
+use InvalidArgumentException;
+use function is_string;
+use LogicException;
 
 /**
  * Represents an Event managed by Stopwatch.
@@ -40,12 +47,12 @@ class StopwatchEvent
      * @param bool        $morePrecision If true, time is stored as float to keep the original microsecond precision
      * @param string|null $name          The event name or null to define the name as default
      *
-     * @throws \InvalidArgumentException When the raw time is not valid
+     * @throws InvalidArgumentException When the raw time is not valid
      */
     public function __construct(float $origin, string $category = null, bool $morePrecision = false, string $name = null)
     {
         $this->origin = $this->formatTime($origin);
-        $this->category = \is_string($category) ? $category : 'default';
+        $this->category = is_string($category) ? $category : 'default';
         $this->morePrecision = $morePrecision;
         $this->name = $name ?? 'default';
     }
@@ -53,7 +60,7 @@ class StopwatchEvent
     /**
      * Gets the category.
      */
-    public function getCategory(): string
+    public function getCategory() : string
     {
         return $this->category;
     }
@@ -61,7 +68,7 @@ class StopwatchEvent
     /**
      * Gets the origin in milliseconds.
      */
-    public function getOrigin(): float
+    public function getOrigin() : float
     {
         return $this->origin;
     }
@@ -71,7 +78,7 @@ class StopwatchEvent
      *
      * @return $this
      */
-    public function start(): static
+    public function start() : static
     {
         $this->started[] = $this->getNow();
 
@@ -83,12 +90,12 @@ class StopwatchEvent
      *
      * @return $this
      *
-     * @throws \LogicException When stop() is called without a matching call to start()
+     * @throws LogicException When stop() is called without a matching call to start()
      */
-    public function stop(): static
+    public function stop() : static
     {
-        if (!\count($this->started)) {
-            throw new \LogicException('stop() called but start() has not been called before.');
+        if (!count($this->started)) {
+            throw new LogicException('stop() called but start() has not been called before.');
         }
 
         $this->periods[] = new StopwatchPeriod(array_pop($this->started), $this->getNow(), $this->morePrecision);
@@ -99,7 +106,7 @@ class StopwatchEvent
     /**
      * Checks if the event was started.
      */
-    public function isStarted(): bool
+    public function isStarted() : bool
     {
         return !empty($this->started);
     }
@@ -109,7 +116,7 @@ class StopwatchEvent
      *
      * @return $this
      */
-    public function lap(): static
+    public function lap() : static
     {
         return $this->stop()->start();
     }
@@ -121,7 +128,7 @@ class StopwatchEvent
      */
     public function ensureStopped()
     {
-        while (\count($this->started)) {
+        while (count($this->started)) {
             $this->stop();
         }
     }
@@ -131,7 +138,7 @@ class StopwatchEvent
      *
      * @return StopwatchPeriod[]
      */
-    public function getPeriods(): array
+    public function getPeriods() : array
     {
         return $this->periods;
     }
@@ -139,7 +146,7 @@ class StopwatchEvent
     /**
      * Gets the relative time of the start of the first period in milliseconds.
      */
-    public function getStartTime(): int|float
+    public function getStartTime() : int|float
     {
         if (isset($this->periods[0])) {
             return $this->periods[0]->getStartTime();
@@ -155,9 +162,9 @@ class StopwatchEvent
     /**
      * Gets the relative time of the end of the last period in milliseconds.
      */
-    public function getEndTime(): int|float
+    public function getEndTime() : int|float
     {
-        $count = \count($this->periods);
+        $count = count($this->periods);
 
         return $count ? $this->periods[$count - 1]->getEndTime() : 0;
     }
@@ -165,10 +172,10 @@ class StopwatchEvent
     /**
      * Gets the duration of the events in milliseconds (including all periods).
      */
-    public function getDuration(): int|float
+    public function getDuration() : int|float
     {
         $periods = $this->periods;
-        $left = \count($this->started);
+        $left = count($this->started);
 
         for ($i = $left - 1; $i >= 0; --$i) {
             $periods[] = new StopwatchPeriod($this->started[$i], $this->getNow(), $this->morePrecision);
@@ -185,7 +192,7 @@ class StopwatchEvent
     /**
      * Gets the max memory usage of all periods in bytes.
      */
-    public function getMemory(): int
+    public function getMemory() : int
     {
         $memory = 0;
         foreach ($this->periods as $period) {
@@ -200,7 +207,7 @@ class StopwatchEvent
     /**
      * Return the current time relative to origin in milliseconds.
      */
-    protected function getNow(): float
+    protected function getNow() : float
     {
         return $this->formatTime(microtime(true) * 1000 - $this->origin);
     }
@@ -208,9 +215,9 @@ class StopwatchEvent
     /**
      * Formats a time.
      *
-     * @throws \InvalidArgumentException When the raw time is not valid
+     * @throws InvalidArgumentException When the raw time is not valid
      */
-    private function formatTime(float $time): float
+    private function formatTime(float $time) : float
     {
         return round($time, 1);
     }
@@ -218,12 +225,12 @@ class StopwatchEvent
     /**
      * Gets the event name.
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
 
-    public function __toString(): string
+    public function __toString() : string
     {
         return sprintf('%s/%s: %.2F MiB - %d ms', $this->getCategory(), $this->getName(), $this->getMemory() / 1024 / 1024, $this->getDuration());
     }
