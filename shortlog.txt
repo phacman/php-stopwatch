@@ -1,0 +1,564 @@
+Fabien Potencier (182):
+      2012-11-09 10:47:23 | 7f9072b | moved the Stopwatch classes to their own component
+      2012-11-12 13:43:44 | bde69ee | merged branch dlsniper/stopwatch (PR #5966)
+      2012-12-11 14:49:22 | ffa5b42 | fixed CS
+      2013-01-04 20:58:00 | e10e118 | updated license year (tag: v2.2.6, tag: v2.2.5, tag: v2.2.4, tag: v2.2.3, tag: v2.2.2, tag: v2.2.1, tag: v2.2.0)
+      2013-02-01 01:39:01 | 23d6e7b | updated the branch alias in composer files
+      2013-05-16 11:54:39 | 453f661 | updated version to 2.4
+      2013-07-22 00:19:01 | f9d6c8e | Merge branch '2.3'
+      2013-09-18 11:27:26 | 7a34685 | updated the composer install command to reflect changes in Composer (tag: v2.2.9, tag: v2.2.8, tag: v2.2.7)
+      2013-09-19 13:45:20 | 1f951fa | Merge branch '2.2' into 2.3 (tag: v2.3.6, tag: v2.3.5)
+      2013-09-19 13:47:34 | 960a6a9 | Merge branch '2.3' (tag: v2.4.0-BETA1)
+      2013-10-17 15:48:01 | 2d34915 | Merge branch '2.2' into 2.3 (tag: v2.3.7)
+      2013-10-17 15:48:11 | 0e5f6c6 | Merge branch '2.3' (tag: v2.4.0-BETA2)
+      2013-11-25 00:15:22 | caa5bab | updated version to 2.5
+      2013-12-12 20:06:47 | c8e21e1 | Merge branch '2.3' into 2.4 (tag: v2.4.1)
+      2013-12-12 20:07:18 | 348da30 | Merge branch '2.4'
+      2014-01-07 17:28:54 | 62f7541 | Merge branch '2.3' into 2.4
+      2014-01-07 17:29:57 | 21a5c74 | Merge branch '2.4'
+      2014-02-11 11:51:18 | 01dd0e7 | fixed various inconsistencies (tag: v2.3.12, tag: v2.3.11, tag: v2.3.10)
+      2014-02-11 17:52:09 | bffad32 | Merge branch '2.3' into 2.4 (tag: v2.4.3, tag: v2.4.2)
+      2014-02-11 17:52:21 | bd36afb | Merge branch '2.4' (tag: v2.5.0-BETA1)
+      2014-04-12 21:44:00 | d4c1b46 | made types consistent with those defined in Hack
+      2014-04-12 21:54:57 | 0d7acbe | made phpdoc types consistent with those defined in Hack
+      2014-04-16 10:51:57 | dd754f3 | fixed types in phpdocs
+      2014-04-16 11:15:58 | dbc1404 | unified return null usages
+      2014-04-16 12:02:57 | dc2084d | Merge branch '2.3' into 2.4
+      2014-04-16 12:08:40 | 9eff651 | Merge branch '2.4'
+      2014-04-16 14:30:19 | f660c5f | fixed types in phpdocs
+      2014-04-16 14:34:31 | c8e0ca3 | Merge branch '2.3' into 2.4
+      2014-04-16 14:36:21 | 59e8c44 | Merge branch '2.4'
+      2014-04-19 00:35:25 | 2790a11 | minor #10717 unified return null usages (fabpot) (tag: v2.3.16, tag: v2.3.15, tag: v2.3.14, tag: v2.3.13)
+      2014-04-19 00:37:09 | 343bcc0 | Merge branch '2.3' into 2.4 (tag: v2.4.6, tag: v2.4.5, tag: v2.4.4)
+      2014-04-19 00:40:13 | 724d736 | Merge branch '2.4' (tag: v2.5.0-RC1, tag: v2.5.0-BETA2, tag: v2.5.0)
+      2014-05-23 18:36:49 | 13c947f | updated version to 2.6
+      2014-06-06 07:26:07 | a9b9d81 | feature #10851 Added retrieval of sections (umpirsky)
+      2014-07-08 15:46:35 | 20ca74c | Merge branch '2.3' into 2.4 (tag: v2.4.7)
+      2014-07-08 16:21:33 | b27c569 | Merge branch '2.4' into 2.5 (tag: v2.5.1)
+      2014-07-08 16:21:41 | 6edce0f | Merge branch '2.5'
+      2014-07-09 13:04:55 | 2a9e8f2 | Merge branch '2.3' into 2.4 (tag: v2.4.8)
+      2014-07-09 13:05:48 | 13cb004 | Merge branch '2.4' into 2.5 (tag: v2.5.2)
+      2014-07-09 13:06:26 | 1519513 | Merge branch '2.5'
+      2014-08-04 14:32:26 | 18ae28a | removed some .gitattributes that should have been removed a lot time ago
+      2014-08-06 10:41:27 | 1504be2 | Merge branch '2.3' into 2.4
+      2014-08-06 10:44:37 | 086c8c9 | Merge branch '2.4' into 2.5 (tag: v2.5.3)
+      2014-09-21 22:53:12 | 170c9a5 | fixed CS (tag: v2.3.22, tag: v2.3.21, tag: v2.3.20)
+      2014-09-22 12:51:05 | 95a08e3 | Merge branch '2.3' into 2.4 (tag: v2.4.10, origin/2.4)
+      2014-09-22 13:14:18 | 9f8a33a | Merge branch '2.4' into 2.5 (tag: v2.5.7, tag: v2.5.6, tag: v2.5.5)
+      2014-09-22 15:59:59 | f7cca9c | Merge branch '2.5' (tag: v2.6.0-BETA2, tag: v2.6.0-BETA1, tag: v2.6.0)
+      2014-11-10 21:00:54 | bfad4a7 | updated version to 2.7
+      2014-11-11 11:37:22 | adcdf49 | updated version to 3.0
+      2014-11-29 16:10:59 | 69e540b | feature #12666 [Hackday][Stopwatch] added __toString on StopwatchEvent (damienalexandre)
+      2014-12-02 23:15:53 | 3ad4354 | Merge branch '2.3' into 2.5 (tag: v2.5.8)
+      2014-12-02 23:19:20 | 261abd3 | Merge branch '2.5' into 2.6 (tag: v2.6.1)
+      2014-12-02 23:19:50 | e1aa5ca | Merge branch '2.6' into 2.7
+      2014-12-02 23:20:06 | 05b81f6 | Merge branch '2.7'
+      2014-12-04 11:55:19 | 47179b5 | Merge branch '2.3' into 2.5
+      2014-12-05 15:00:15 | 224d218 | Merge branch '2.5' into 2.6
+      2014-12-08 11:43:57 | 8c72db0 | Merge branch '2.6' into 2.7
+      2014-12-08 11:44:04 | 865101c | Merge branch '2.7'
+      2014-12-20 19:01:23 | 3c5cba9 | Merge branch '2.3' into 2.5
+      2014-12-20 19:02:27 | 1d46a77 | Merge branch '2.5' into 2.6
+      2014-12-22 19:29:52 | 751d72b | Merge branch '2.3' into 2.5
+      2014-12-22 19:44:09 | 207ab2b | Merge branch '2.5' into 2.6
+      2014-12-22 19:45:18 | cb0db51 | Merge branch '2.6' into 2.7
+      2014-12-22 19:45:23 | d7294f0 | Merge branch '2.7'
+      2015-01-03 11:01:13 | 3753beb | Merge branch '2.3' into 2.5 (tag: v2.5.9, tag: v2.5.12, tag: v2.5.11, tag: v2.5.10, origin/2.5)
+      2015-01-03 11:01:59 | e8da528 | Merge branch '2.5' into 2.6 (tag: v2.6.4, tag: v2.6.3, tag: v2.6.2)
+      2015-01-03 11:02:46 | 225cdf1 | Merge branch '2.6' into 2.7
+      2015-01-03 11:04:30 | dbbf321 | Merge branch '2.7'
+      2015-01-09 00:38:30 | f6ce5e0 | bumped min PHP version to 5.3.9
+      2015-02-08 10:41:14 | eb9c077 | renamed composer.phar to composer to be consistent with the Symfony docs
+      2015-02-11 10:12:14 | 447beab | Merge branch '2.3' into 2.6
+      2015-02-11 10:17:51 | 2883cda | Merge branch '2.6' into 2.7
+      2015-02-12 11:47:54 | d6a491e | Merge branch '2.7'
+      2015-03-22 19:55:57 | 5f196e8 | Merge branch '2.3' into 2.6 (tag: v2.6.6)
+      2015-03-22 19:57:18 | 39dc082 | Merge branch '2.6' into 2.7
+      2015-03-24 20:09:17 | bae98f9 | Merge branch '2.7'
+      2015-04-10 10:19:44 | 478c923 | Merge branch '2.6' into 2.7
+      2015-04-10 10:23:38 | f9b0a62 | removed 3.0 constraints from 2.7 composer files (tag: v2.7.0-BETA1)
+      2015-04-10 10:30:08 | 69279f7 | Merge branch '2.8'
+      2015-04-10 10:31:54 | 9ffd307 | bumped deps on 2.8 in all composer.json
+      2015-04-10 11:55:07 | 5fc73ec | Revert "removed 3.0 constraints from 2.7 composer files"
+      2015-04-10 11:56:33 | e91464c | updated version to 2.8
+      2015-05-02 18:18:45 | b470f87 | Merge branch '2.3' into 2.6 (tag: v2.6.9, tag: v2.6.8, tag: v2.6.7)
+      2015-05-02 18:21:08 | 7702945 | Merge branch '2.6' into 2.7 (tag: v2.7.0-BETA2, tag: v2.7.0)
+      2015-06-04 23:11:39 | cc04bcc | Merge branch '2.3' into 2.6
+      2015-06-04 23:11:48 | c653f19 | Merge branch '2.6' into 2.7 (tag: v2.7.1)
+      2015-06-04 23:21:09 | a3cf998 | Merge branch '2.7' into 2.8
+      2015-06-04 23:30:47 | 432f3ef | Merge branch '2.8'
+      2015-08-24 09:53:33 | abc61ba | fixes CS (tag: v2.7.4)
+      2015-08-24 10:18:02 | 028ea00 | Merge branch '2.7' into 2.8
+      2015-08-24 10:21:16 | e740838 | Merge branch '2.8'
+      2015-09-14 17:14:09 | 848b511 | Merge branch '2.3' into 2.7
+      2015-09-14 17:15:17 | 9eb95ce | Merge branch '2.7' into 2.8
+      2015-09-14 17:15:24 | d6ca061 | Merge branch '2.8'
+      2015-10-30 23:10:21 | 9fa5990 | Merge branch '2.3' into 2.7 (tag: v2.7.8, tag: v2.7.7)
+      2015-10-30 23:15:42 | 5f1e2eb | Merge branch '2.7' into 2.8 (tag: v2.8.1, tag: v2.8.0-BETA1, tag: v2.8.0)
+      2015-10-31 02:35:59 | 6aeac89 | Merge branch '2.8' (tag: v3.0.1, tag: v3.0.0-BETA1, tag: v3.0.0)
+      2015-12-01 00:39:17 | 43665c5 | updated version to 3.1
+      2016-01-03 18:32:00 | 9be3fbe | Merge branch '2.3' into 2.7 (tag: v2.7.9, tag: v2.7.10)
+      2016-01-03 18:33:41 | e3bc8e2 | Merge branch '2.7' into 2.8 (tag: v2.8.3, tag: v2.8.2)
+      2016-01-03 18:35:16 | 4a20480 | Merge branch '2.8' into 3.0 (tag: v3.0.3, tag: v3.0.2)
+      2016-01-03 18:35:40 | 00045f8 | Merge branch '3.0'
+      2016-03-04 10:52:28 | a4f9671 | Merge branch '2.3' into 2.7 (tag: v2.7.13, tag: v2.7.12, tag: v2.7.11)
+      2016-03-04 10:54:35 | 9e24824 | Merge branch '2.7' into 2.8 (tag: v2.8.6, tag: v2.8.5, tag: v2.8.4)
+      2016-03-04 10:55:57 | 6015187 | Merge branch '2.8' into 3.0 (tag: v3.0.6, tag: v3.0.5, tag: v3.0.4)
+      2016-03-04 10:56:56 | 4670f12 | Merge branch '3.0' (tag: v3.1.0-RC1, tag: v3.1.0-BETA1, tag: v3.1.0)
+      2016-05-13 21:13:23 | 567d31e | updated version to 3.2
+      2016-06-28 08:50:50 | a9ecd98 | removed dots at the end of @param and @return (tag: v2.7.22, tag: v2.7.21, tag: v2.7.20, tag: v2.7.19, tag: v2.7.18, tag: v2.7.17, tag: v2.7.16, tag: v2.7.15)
+      2016-06-29 08:29:29 | 35bae47 | Merge branch '2.7' into 2.8 (tag: v2.8.9, tag: v2.8.8, tag: v2.8.15, tag: v2.8.14, tag: v2.8.13, tag: v2.8.12, tag: v2.8.11, tag: v2.8.10)
+      2016-06-29 08:40:00 | 49c0ea2 | Merge branch '2.8' into 3.0 (tag: v3.0.9, tag: v3.0.8, origin/3.0)
+      2016-06-29 08:41:56 | bb42806 | Merge branch '3.0' into 3.1 (tag: v3.1.8, tag: v3.1.7, tag: v3.1.6, tag: v3.1.5, tag: v3.1.4, tag: v3.1.3, tag: v3.1.2)
+      2016-06-29 08:43:10 | 5b139e1 | Merge branch '3.1' (tag: v3.2.1, tag: v3.2.0-RC2, tag: v3.2.0-RC1, tag: v3.2.0-BETA1, tag: v3.2.0)
+      2016-11-19 23:35:20 | a538e8a | updated version to 3.3
+      2016-12-26 10:50:27 | 1ca538c | fixed @return when returning this or static
+      2016-12-27 13:39:57 | 3c6a9c7 | Merge branch '2.7' into 2.8
+      2016-12-27 13:43:25 | 75a4457 | Merge branch '2.8' into 3.1
+      2016-12-27 13:44:30 | 9a29747 | Merge branch '3.1' into 3.2
+      2016-12-27 13:45:09 | 8911044 | Merge branch '3.2'
+      2016-12-27 13:48:22 | bab02fd | fixed @return when returning this or static
+      2016-12-30 00:40:29 | eb2f4ab | Merge branch '2.8' into 3.1
+      2017-01-02 23:30:00 | 049f83a | updated LICENSE year (tag: v2.7.24, tag: v2.7.23)
+      2017-01-02 23:30:24 | e8bb9de | Merge branch '2.7' into 2.8 (tag: v2.8.17, tag: v2.8.16)
+      2017-01-02 23:31:54 | 06dce9b | Merge branch '2.8' into 3.1 (tag: v3.1.9, tag: v3.1.10, origin/3.1)
+      2017-01-02 23:32:22 | 9aa0b51 | Merge branch '3.1' into 3.2 (tag: v3.2.4, tag: v3.2.3, tag: v3.2.2)
+      2017-01-02 23:33:09 | edfe340 | Merge branch '3.2'
+      2017-04-12 17:07:15 | e02577b | Merge branch '2.7' into 2.8 (tag: v2.8.27, tag: v2.8.26, tag: v2.8.25, tag: v2.8.24, tag: v2.8.23, tag: v2.8.22, tag: v2.8.21, tag: v2.8.20)
+      2017-04-12 17:13:17 | 5a0105a | Merge branch '2.8' into 3.2 (tag: v3.2.9, tag: v3.2.8, tag: v3.2.14, tag: v3.2.13, tag: v3.2.12, tag: v3.2.11, tag: v3.2.10, origin/3.2)
+      2017-04-12 17:14:56 | 602a152 | Merge branch '3.2' (tag: v3.3.6, tag: v3.3.5, tag: v3.3.4, tag: v3.3.3, tag: v3.3.2, tag: v3.3.1, tag: v3.3.0-RC1, tag: v3.3.0-BETA1, tag: v3.3.0)
+      2017-05-17 19:21:40 | 162ab93 | updated version to 3.4
+      2017-05-17 19:33:00 | a4cd4b2 | updated version to 4.0
+      2017-05-17 21:41:56 | 6ad8c1a | bumped minimum version to PHP 7.1
+      2017-07-03 11:14:23 | a9c8a8b | Merge branch '3.4'
+      2017-07-03 16:32:35 | e16011d | Merge branch '3.4'
+      2017-11-10 21:59:36 | 533bb9d | Merge branch '2.7' into 2.8 (tag: v2.8.32, tag: v2.8.31, tag: v2.8.30, tag: v2.8.29)
+      2017-11-10 22:02:53 | 1e93c31 | Merge branch '2.8' into 3.3 (tag: v3.3.14, tag: v3.3.13, tag: v3.3.12, tag: v3.3.11)
+      2017-11-21 20:31:29 | 42d2b7e | updated version to 4.1
+      2018-01-03 10:23:28 | edf1213 | fixed years in copyright (tag: v2.7.51, tag: v2.7.50, tag: v2.7.49, tag: v2.7.48, tag: v2.7.47, tag: v2.7.46, tag: v2.7.45, tag: v2.7.44, tag: v2.7.43, tag: v2.7.42, tag: v2.7.41, tag: v2.7.40, origin/2.7)
+      2018-01-03 10:36:31 | 5702120 | Merge branch '2.7' into 2.8 (tag: v2.8.43, tag: v2.8.42, tag: v2.8.41, tag: v2.8.40, tag: v2.8.39, tag: v2.8.38, tag: v2.8.37, tag: v2.8.36, tag: v2.8.35, tag: v2.8.34, tag: v2.8.33)
+      2018-01-03 10:37:11 | 20772c5 | Merge branch '2.8' into 3.3 (tag: v3.3.18, tag: v3.3.17, tag: v3.3.16, tag: v3.3.15, origin/3.3)
+      2018-01-03 10:37:34 | c865551 | Merge branch '3.3' into 3.4 (tag: v3.4.4, tag: v3.4.3)
+      2018-01-03 10:38:00 | d52321f | Merge branch '3.4' into 4.0 (tag: v4.0.4, tag: v4.0.3)
+      2018-01-03 10:38:11 | a882ef3 | Merge branch '4.0'
+      2018-05-07 17:51:25 | 4ca32e1 | updated version to 4.2
+      2018-07-13 20:06:58 | e656f82 | renamed Contract to Contracts
+      2018-11-26 19:19:01 | e7a0abd | updated version to 4.3
+      2019-01-16 12:39:14 | 2a651c2 | switched array() to [] (tag: v3.4.30, tag: v3.4.29, tag: v3.4.28, tag: v3.4.27, tag: v3.4.26, tag: v3.4.25, tag: v3.4.24, tag: v3.4.23, tag: v3.4.22)
+      2019-01-16 21:21:11 | 2b2c0bb | Merge branch '3.4' into 4.1 (tag: v4.1.12, tag: v4.1.11, origin/4.1)
+      2019-01-16 23:31:39 | b1a5f64 | Merge branch '4.1' into 4.2 (tag: v4.2.9, tag: v4.2.8, tag: v4.2.7, tag: v4.2.6, tag: v4.2.5, tag: v4.2.4, tag: v4.2.3, tag: v4.2.12, tag: v4.2.11, tag: v4.2.10, origin/4.2)
+      2019-01-17 00:53:39 | 4bdb8ec | Merge branch '4.2' into short-array-master (tag: v4.3.0-BETA2, tag: v4.3.0-BETA1)
+      2019-05-09 10:23:25 | 7d5a6a8 | updated version to 4.4
+      2019-05-27 13:42:03 | e6e6154 | Merge branch '4.3'
+      2019-05-28 15:18:42 | 034e827 | updated version to 5.0
+      2019-07-08 10:23:44 | a4239be | fixed deprecation message
+      2019-07-08 10:27:27 | a623ad6 | Merge branch '4.4'
+      2019-09-16 11:16:50 | c7e62ce | Merge branch '4.4'
+      2019-11-03 20:17:59 | efe0af2 | bug #34181 [Stopwatch] Fixed bug in getDuration when counting multiple ongoing periods (TimoBakx) (tag: v3.4.36, tag: v3.4.35, tag: v3.4.34)
+      2019-11-17 21:31:35 | 8cbd758 | updated version to 5.1
+      2020-03-15 12:01:00 | a7a98f4 | Add missing dots at the end of exception messages (tag: v3.4.45, tag: v3.4.44, tag: v3.4.43, tag: v3.4.42, tag: v3.4.41, tag: v3.4.40, tag: v3.4.39)
+      2020-03-27 19:56:45 | a1d86d3 | Merge branch '4.4' into 5.0 (tag: v5.0.8, tag: v5.0.7)
+      2020-05-16 15:09:30 | 4623a5b | updated version to 5.2
+      2020-10-04 19:29:28 | ce5be42 | Merge branch '4.4' into 5.1
+      2020-10-04 19:29:51 | c949491 | Merge branch '5.1' (tag: v5.2.0-BETA1)
+      2021-01-01 12:24:35 | 9ae637d | Bump license year
+      2021-01-01 12:25:51 | 019b8ba | Merge branch '4.4' into 5.1
+      2021-01-01 12:26:45 | 7d2072a | Merge branch '5.1' into 5.2
+      2021-01-10 11:16:05 | 3151fa2 | Improve composer.json descriptions
+      2021-01-10 19:29:19 | 1db6e23 | Merge branch '4.4' into 5.1
+      2021-01-10 19:30:10 | 9668537 | Merge branch '5.1' into 5.2
+      2021-01-11 11:47:58 | cb7c1da | Use ::class keyword when possible
+      2021-01-11 12:50:50 | 4e619f9 | Merge branch '4.4' into 5.1
+      2021-01-11 12:51:46 | f0302d2 | Merge branch '5.1' into 5.2
+      2022-01-02 12:41:36 | ad65204 | Bump license year (tag: v4.4.37)
+      2022-01-02 12:51:59 | fec0d6b | Merge branch '4.4' into 5.3 (tag: v5.3.14, origin/5.3)
+      2022-01-02 12:53:40 | 3952207 | Merge branch '5.3' into 5.4 (tag: v5.4.3)
+      2022-01-02 12:55:41 | 6835045 | Merge branch '5.4' into 6.0 (tag: v6.0.3)
+      2023-01-01 11:32:19 | bd2b066 | Bump license year to 2023 (tag: v5.4.19)
+      2023-01-01 11:36:10 | 011e781 | Merge branch '5.4' into 6.0 (tag: v6.0.19, origin/6.0)
+      2023-01-01 11:36:55 | 00b6ac1 | Merge branch '6.0' into 6.1 (tag: v6.2.5, tag: v6.1.11, origin/6.1)
+      2023-01-01 11:38:37 | 4f9efd2 | Merge branch '6.2' into 6.3
+      2023-01-24 17:02:24 | 76a8c5e | Update license years (last time)
+      2023-02-02 10:44:01 | a61866e | Merge branch '5.4' into 6.2
+      2023-02-02 10:48:03 | 64bddc4 | Merge branch '6.2' into 6.3
+
+Nicolas Grekas (173):
+      2014-11-20 00:23:28 | e24eab1 | [3.0] Update required PHP to 5.5.9
+      2015-01-13 17:17:46 | 6669f15 | [PhpUnitBridge] new bridge for testing with PHPUnit
+      2015-02-21 16:23:59 | 5f4850b | Merge branch '2.7'
+      2015-02-24 11:06:17 | 8f27a72 | [2.3] require-dev PHPUnit bridge (tag: v2.3.26)
+      2015-02-24 14:52:21 | ba4e774 | Merge branch '2.3' into 2.6 (tag: v2.6.5)
+      2015-04-07 14:59:04 | cb9c706 | [Process] Fix volatile test
+      2015-04-24 10:02:53 | 20c8903 | Merge branch '2.7' into 2.8
+      2015-04-24 10:09:27 | f869ed0 | Merge branch '2.8'
+      2015-05-12 18:16:46 | 548bdb9 | Merge branch '2.7' into 2.8
+      2015-05-12 18:48:43 | e799eaa | Merge branch '2.8'
+      2015-06-30 09:51:58 | b52a88b | Towards 100% HHVM compat
+      2015-06-30 19:10:16 | 1b8f500 | Merge branch '2.3' into 2.6
+      2015-06-30 19:34:54 | 7ca0e1b | [Stopwatch] Fix test
+      2015-06-30 19:49:57 | 6bd1465 | Merge branch '2.3' into 2.6
+      2015-07-01 14:25:50 | ca71780 | Merge branch '2.6' into 2.7
+      2015-07-01 18:12:49 | ff357af | Mock microtime() and time() in transient tests (tag: v2.3.32, tag: v2.3.31)
+      2015-07-01 21:23:01 | a0d91f2 | Merge branch '2.3' into 2.6 (tag: v2.6.13, tag: v2.6.12, tag: v2.6.11, tag: v2.6.10, origin/2.6)
+      2015-07-01 21:23:16 | b07a866 | Merge branch '2.6' into 2.7 (tag: v2.7.3, tag: v2.7.2)
+      2015-07-01 21:24:26 | cd5f0dc | Merge branch '2.7' into 2.8
+      2015-07-01 23:40:29 | 5a343d4 | Merge branch '2.8'
+      2015-09-21 00:33:09 | 57f9fbf | [Console] Add clock mock to fix transient test on HHVM (tag: v2.3.33)
+      2015-09-22 16:49:29 | 08dd97b | Merge branch '2.3' into 2.7 (tag: v2.7.5)
+      2015-09-22 16:49:41 | 53219df | Merge branch '2.7' into 2.8
+      2015-09-22 17:11:08 | 3b60020 | Merge branch '2.8'
+      2015-10-09 19:17:11 | 75d7c50 | [ci] Enable collecting and replaying skipped tests
+      2015-10-10 12:26:25 | 8a538c2 | Merge branch '2.3' into 2.7
+      2015-10-10 12:36:22 | 1ae1aa8 | Merge branch '2.7' into 2.8
+      2015-10-10 13:22:50 | 2069249 | Merge branch '2.8'
+      2015-10-11 11:09:32 | 0b7554f | [PhpUnit] Auto-register SymfonyTestsListener
+      2015-10-11 12:14:55 | f2e6999 | Merge branch '2.8'
+      2015-10-11 11:09:32 | 3143249 | [ci] SymfonyTestsListener is now auto-registered
+      2015-10-11 12:38:55 | 0ef7820 | Merge branch '2.3' into 2.7
+      2015-10-11 12:00:41 | 497c0d9 | [PhpUnit] Mock clock on @group time-sensitive annotations
+      2015-10-11 12:00:41 | 04d2cd2 | [2.3] Cherry-pick @group time-sensitive annotations (tag: v2.3.34)
+      2015-10-12 15:42:24 | f8ab957 | Merge branch '2.3' into 2.7 (tag: v2.7.6)
+      2015-10-12 15:48:30 | d88ca29 | Merge branch '2.8'
+      2015-11-18 11:19:46 | fb8287e | Add missing exclusions from phpunit.xml.dist (tag: v2.3.36, tag: v2.3.35)
+      2016-06-06 12:38:47 | 921f345 | `@throws` annotations should go after `@return` (tag: v2.7.14)
+      2016-06-06 14:11:27 | 5e62805 | Merge branch '2.7' into 2.8 (tag: v2.8.7)
+      2016-06-06 14:33:26 | e0310b2 | Merge branch '2.8' into 3.0 (tag: v3.0.7)
+      2016-06-06 14:34:54 | e7238f9 | Merge branch '3.0' into 3.1 (tag: v3.1.1)
+      2016-06-06 14:53:30 | 4d61f33 | Merge branch '3.1'
+      2017-01-02 17:57:35 | dfc6103 | Merge branch '3.1' into 3.2
+      2017-01-02 17:58:37 | 8620144 | Merge branch '3.2'
+      2017-02-18 20:06:33 | 9e43696 | Merge branch '2.7' into 2.8 (tag: v2.8.19, tag: v2.8.18)
+      2017-02-18 20:28:00 | c5ee0f8 | Merge branch '2.8' into 3.2 (tag: v3.2.7, tag: v3.2.6, tag: v3.2.5)
+      2017-02-18 20:35:19 | 13a61f2 | Merge branch '3.2'
+      2017-07-06 13:49:06 | c906ad9 | Merge branch '3.4'
+      2017-07-17 18:37:04 | 60de28b | Merge branch '3.4'
+      2017-07-28 16:02:25 | 9a5610a | Bump minimal PHP version to ^5.5.9|>=7.0.8 (tag: v3.3.9, tag: v3.3.8, tag: v3.3.7)
+      2017-08-03 12:34:20 | 1f8ea2f | Merge branch '3.3' into 3.4
+      2017-10-02 00:00:16 | 28ee62e | Merge branch '2.7' into 2.8 (tag: v2.8.28)
+      2017-10-02 09:42:24 | 170edf8 | Merge branch '2.8' into 3.3 (tag: v3.3.10)
+      2017-10-02 09:49:52 | 93a3f34 | Merge branch '3.3' into 3.4 (tag: v3.4.0-BETA2, tag: v3.4.0-BETA1)
+      2017-10-02 09:59:24 | ccf7177 | Merge branch '3.4' (tag: v4.0.0-BETA2, tag: v4.0.0-BETA1)
+      2017-10-28 21:51:46 | 1ecc0c2 | Remove useless docblocks
+      2017-11-05 18:25:56 | d6880d6 | Merge branch '2.7' into 2.8
+      2017-11-05 18:47:03 | a32cabf | Merge branch '2.8' into 3.3
+      2017-11-05 19:10:10 | 537499b | Merge branch '3.3' into 3.4 (tag: v3.4.0-BETA3)
+      2017-11-05 19:26:21 | 46fbaea | Merge branch '3.4' (tag: v4.0.0-BETA3)
+      2017-11-07 17:25:27 | 8959e7e | [Stopwatch] minor fix (tag: v2.7.39, tag: v2.7.38, tag: v2.7.37, tag: v2.7.36)
+      2017-11-07 13:45:59 | 52510fe | [3.4] Remove useless docblocks (tag: v3.4.2, tag: v3.4.1, tag: v3.4.0-RC2, tag: v3.4.0-RC1, tag: v3.4.0-BETA4, tag: v3.4.0)
+      2017-11-07 17:34:02 | 17c6308 | Merge branch '3.4'
+      2017-10-28 21:15:32 | 763f0d6 | Replace more docblocks by type-hints
+      2017-11-09 13:03:38 | ac0e491 | Remove some unneeded checks/tests (tag: v4.0.2, tag: v4.0.1, tag: v4.0.0-RC2, tag: v4.0.0-RC1, tag: v4.0.0-BETA4, tag: v4.0.0)
+      2018-01-02 18:45:22 | bb9ce78 | Merge branch '2.7' into 2.8
+      2018-01-02 18:47:19 | 9cc940c | Merge branch '2.8' into 3.3
+      2018-01-02 18:47:31 | cbea5d5 | Merge branch '3.3' into 3.4
+      2018-01-02 19:33:53 | 84ea57c | Merge branch '3.4' into 4.0
+      2018-01-02 19:34:13 | 4d9bec4 | Merge branch '4.0'
+      2018-02-19 19:50:22 | 6795ffa | Merge branch '3.4' into 4.0 (tag: v4.0.9, tag: v4.0.8, tag: v4.0.7, tag: v4.0.6, tag: v4.0.5, tag: v4.0.13, tag: v4.0.12, tag: v4.0.11, tag: v4.0.10)
+      2018-02-19 19:51:42 | 07463bb | Merge branch '4.0' (tag: v4.1.2, tag: v4.1.1, tag: v4.1.0-BETA3, tag: v4.1.0-BETA2, tag: v4.1.0-BETA1, tag: v4.1.0)
+      2018-04-29 17:58:54 | 249f1b6 | Added symfony/contracts: a set of abstractions extracted out of the components
+      2018-07-26 11:45:46 | 60e1ce8 | Merge branch '2.8' into 3.4
+      2018-07-26 11:51:09 | cfbfebe | Merge branch '3.4' into 4.0
+      2018-07-26 11:55:25 | 8d0744f | Merge branch '4.0' into 4.1
+      2018-07-26 11:59:12 | e93bd29 | Merge branch '4.1'
+      2018-07-26 13:03:52 | deda276 | minor #28025 Use an empty string as default for assertEquals (DavidPrevot) (tag: v3.4.16, tag: v3.4.15, tag: v3.4.14)
+      2018-07-26 14:00:39 | e4c0f5d | Merge branch '3.4' into 4.0 (tag: v4.0.15, tag: v4.0.14, origin/4.0)
+      2018-07-26 14:00:49 | 966c982 | Merge branch '4.0' into 4.1 (tag: v4.1.5, tag: v4.1.4, tag: v4.1.3)
+      2018-07-26 14:01:15 | 6037c66 | Merge branch '4.1'
+      2018-10-02 15:28:39 | 05e52a3 | Merge branch '2.8' into 3.4 (tag: v3.4.18, tag: v3.4.17)
+      2018-10-02 15:40:59 | 5bfc064 | Merge branch '3.4' into 4.1 (tag: v4.1.7, tag: v4.1.6)
+      2018-10-02 15:43:31 | 187946b | Merge branch '4.1' (tag: v4.2.0-BETA1)
+      2018-11-11 22:48:54 | 0f43969 | Merge branch '2.8' into 3.4 (tag: v3.4.20, tag: v3.4.19)
+      2018-11-11 22:51:29 | 87a8017 | Merge branch '3.4' into 4.1 (tag: v4.1.9, tag: v4.1.8)
+      2018-11-11 22:51:51 | ec07671 | Merge branch '4.1' (tag: v4.2.1, tag: v4.2.0-RC1, tag: v4.2.0-BETA2, tag: v4.2.0)
+      2019-05-27 11:08:49 | 6b100e9 | Reference individual contracts packages (tag: v4.3.3, tag: v4.3.2, tag: v4.3.1, tag: v4.3.0-RC1, tag: v4.3.0)
+      2019-05-28 16:10:17 | f10f541 | Bump Symfony 5.0 to PHP 7.2
+      2019-07-11 08:40:26 | 62871f5 | Merge branch '4.4'
+      2019-08-01 12:21:10 | 01a443a | Merge branch '3.4' into 4.3
+      2019-08-01 12:21:25 | c378d70 | Merge branch '4.3' into 4.4
+      2019-08-01 12:33:55 | 4c21352 | Merge branch '4.4'
+      2019-08-02 14:51:32 | 994d224 | Merge branch '3.4' into 4.3
+      2019-08-02 15:22:55 | b1f04a2 | Merge branch '4.3' into 4.4
+      2019-08-02 15:41:59 | 0c536a4 | Merge branch '4.4'
+      2019-08-04 00:50:52 | 02d5328 | Merge branch '3.4' into 4.3
+      2019-08-04 00:59:26 | b3040d5 | Merge branch '4.3' into 4.4
+      2019-08-04 01:02:11 | 4936591 | Merge branch '4.4'
+      2019-08-06 10:11:09 | 29bb9ed | Merge branch '3.4' into 4.3
+      2019-08-06 10:11:23 | 20fa860 | Merge branch '4.3' into 4.4
+      2019-08-06 10:16:59 | 60118e8 | Merge branch '4.4'
+      2019-08-07 14:52:19 | 1e4ff45 | Merge branch '3.4' into 4.3 (tag: v4.3.6, tag: v4.3.5, tag: v4.3.4)
+      2019-08-07 15:00:28 | 3dfa8b3 | Merge branch '4.3' into 4.4
+      2019-08-07 15:07:17 | a663cf4 | Merge branch '4.4'
+      2019-09-08 23:44:36 | c91bc1b | Merge branch '4.4'
+      2019-10-07 12:06:09 | c6c65cf | Merge branch '4.4'
+      2019-10-22 20:21:12 | 9e2c418 | Merge branch '4.4'
+      2019-11-05 17:48:09 | e96c259 | Merge branch '3.4' into 4.3 (tag: v4.3.9, tag: v4.3.8, tag: v4.3.7)
+      2019-11-05 19:11:08 | 5745b51 | Merge branch '4.3' into 4.4 (tag: v4.4.2, tag: v4.4.1, tag: v4.4.0-RC1, tag: v4.4.0-BETA2, tag: v4.4.0-BETA1, tag: v4.4.0)
+      2019-11-05 19:53:02 | 6f6ab47 | Merge branch '4.4' (tag: v5.0.0-RC1, tag: v5.0.0-BETA2, tag: v5.0.0-BETA1)
+      2019-11-18 20:27:11 | d410282 | Allow PHP ^7.2.5 (tag: v5.0.2, tag: v5.0.1, tag: v5.0.0)
+      2019-11-21 10:02:52 | a01f514 | Merge branch '5.0'
+      2020-01-04 15:24:57 | 4aff371 | Merge branch '3.4' into 4.3 (tag: v4.3.11, tag: v4.3.10, origin/4.3)
+      2020-01-04 16:00:46 | abc08d7 | Merge branch '4.3' into 4.4 (tag: v4.4.5, tag: v4.4.4, tag: v4.4.3)
+      2020-01-04 17:08:26 | 5d9add8 | Merge branch '4.4' into 5.0 (tag: v5.0.5, tag: v5.0.4, tag: v5.0.3)
+      2020-01-04 17:20:45 | 8705a89 | Merge branch '5.0'
+      2019-09-24 14:01:54 | 5f03e4c | [DI] fix preloading script generation (tag: v4.4.6)
+      2020-03-18 11:00:37 | 6caf14c | Merge branch '4.4' into 5.0 (tag: v5.0.6)
+      2020-03-18 11:01:26 | 8d1ab50 | Merge branch '5.0'
+      2020-03-30 14:43:41 | 31a9a72 | Merge branch '5.0' (tag: v5.1.0-RC1, tag: v5.1.0-BETA1)
+      2020-05-20 11:37:50 | f51fb90 | Use ">=" for the "php" requirement (tag: v4.4.9, tag: v4.4.13, tag: v4.4.12, tag: v4.4.11, tag: v4.4.10)
+      2020-05-20 20:38:26 | fbc3084 | Merge branch '4.4' into 5.0 (tag: v5.0.9, tag: v5.0.11, tag: v5.0.10, origin/5.0)
+      2020-05-20 20:43:50 | 0f7c58c | Merge branch '5.0' into 5.1 (tag: v5.1.7, tag: v5.1.6, tag: v5.1.5, tag: v5.1.4, tag: v5.1.3, tag: v5.1.2, tag: v5.1.1, tag: v5.1.0-RC2, tag: v5.1.0)
+      2020-05-20 20:44:07 | 3e6eedd | Merge branch '5.1'
+      2020-09-02 19:08:58 | 6f89e19 | Merge branch '3.4' into 4.4 (tag: v4.4.15, tag: v4.4.14)
+      2020-10-06 14:13:36 | b8464aa | Remove "branch-alias", populate "version"
+      2020-10-06 14:41:17 | b6070a1 | Merge branch '3.4' into 4.4
+      2020-10-06 14:49:34 | d7ebedc | Merge branch '4.4' into 5.1
+      2020-10-06 15:00:29 | 3c1dab5 | Merge branch '5.1' into 5.x
+      2020-10-06 17:37:11 | 04353d6 | Update versions in composer.json
+      2020-10-06 18:45:41 | 5ff7141 | Merge branch '3.4' into 4.4
+      2020-10-06 18:48:42 | 0a25513 | Merge branch '4.4' into 5.1
+      2020-10-06 18:53:16 | 377dd8c | Merge branch '5.1' into 5.x
+      2020-10-07 15:58:11 | 617ab97 | Remove "version" from composer.json files, use "branch-version" instead
+      2020-10-13 15:30:56 | aa46562 | Merge branch '3.4' into 4.4
+      2020-10-13 15:35:38 | b045b4a | Merge branch '4.4' into 5.1
+      2020-10-13 15:43:06 | dccf656 | Merge branch '5.1' into 5.x
+      2020-10-13 16:20:16 | 26b0e43 | Fix branch-version
+      2020-10-13 16:20:53 | 4f5d176 | Merge branch '3.4' into 4.4
+      2020-10-13 16:21:37 | 6a3e184 | Merge branch '4.4' into 5.1
+      2020-10-13 16:22:54 | d1d9576 | Merge branch '5.1' into 5.x (tag: v5.2.0-BETA2)
+      2020-10-24 13:23:57 | 298b81f | Remove branch-version (keep them for contracts only) (tag: v3.4.47, tag: v3.4.46, origin/3.4)
+      2020-10-24 14:50:19 | 7c1d146 | Merge branch '3.4' into 4.4 (tag: v4.4.16)
+      2020-10-24 15:01:57 | 3d9f57c | Merge branch '4.4' into 5.1 (tag: v5.1.8)
+      2020-10-24 15:08:07 | c0226a3 | Merge branch '5.1' into 5.x (tag: v5.2.0-BETA3)
+      2021-01-27 13:01:46 | 40e7945 | Merge branch '4.4' into 5.1 (tag: v5.1.11, origin/5.1)
+      2021-01-27 13:15:41 | b12274a | Merge branch '5.1' into 5.2 (tag: v5.2.4, tag: v5.2.3, tag: v5.2.2)
+      2021-05-09 19:15:12 | 8b99a52 | Fix style of changelogs/readmes (tag: v5.3.0-RC1, tag: v5.3.0-BETA4)
+      2021-05-19 16:18:37 | 624c7b7 | Bump Symfony 6 to PHP 8
+      2021-05-26 20:31:58 | 64f4ed9 | Merge branch '4.4' into 5.2 (tag: v5.2.10)
+      2021-05-26 20:39:37 | 80d9ae0 | Fix CS in README files (tag: v4.4.25)
+      2021-05-26 20:43:10 | 313d02f | Merge branch '5.2' into 5.3 (tag: v5.3.0)
+      2021-05-26 20:44:04 | 5e30755 | Merge branch '5.4' into 6.0
+      2021-06-02 19:09:43 | 49eecea | Update phpunit.xml.dist files for phpunit >= 9.3
+      2021-06-06 16:54:44 | a482da2 | [Templating][String][Stopwatch] add union types
+      2021-07-13 14:47:05 | 7627888 | [Contracts] add return types and bump to v3
+      2021-08-12 12:48:28 | 7fe12de | Cleanup `@return` annotations
+      2021-08-12 17:08:08 | 6c03f6a | Merge branch '5.4' into 6.0
+      2021-08-12 17:46:41 | 661c9a3 | Add return types - batch 1/n
+      2021-08-16 19:31:32 | b909f8b | Run php-cs-fixer
+      2021-08-12 16:32:19 | 16c74a5 | Cleanup more `@return` annotations
+      2021-08-17 18:35:52 | 231ca21 | Merge branch '5.4' into 6.0
+      2021-11-23 22:05:29 | 0e0ed55 | Merge branch '5.4' into 6.0 (tag: v6.0.0-RC1, tag: v6.0.0)
+      2022-02-18 19:06:09 | 4d04b5c | Merge branch '4.4' into 5.4 (tag: v5.4.5)
+      2022-02-21 20:15:17 | f2c1780 | Merge branch '5.4' into 6.0 (tag: v6.0.5)
+      2022-02-09 17:00:38 | 77dedae | Bump minimum version of PHP to 8.1 (tag: v6.1.0-RC1, tag: v6.1.0-BETA1, tag: v6.1.0)
+      2022-09-28 16:19:49 | 6df7a3e | Merge branch '4.4' into 5.4 (tag: v5.4.13)
+      2022-09-28 18:52:47 | 7554fde | Merge branch '5.4' into 6.0 (tag: v6.0.13)
+      2022-09-28 19:00:33 | 266636b | Merge branch '6.0' into 6.1 (tag: v6.2.0-RC1, tag: v6.2.0-BETA1, tag: v6.2.0, tag: v6.1.5)
+      2023-02-14 11:44:56 | f3adc98 | Merge branch '5.4' into 6.2 (tag: v6.2.7, origin/6.2)
+      2023-02-14 12:04:20 | f7fa451 | Merge branch '6.2' into 6.3
+      2023-02-16 13:14:28 | fc47f10 | Merge branch '6.2' into 6.3 (HEAD -> 6.3, tag: v6.4.0-BETA1, tag: v6.3.0-RC1, tag: v6.3.0-BETA1, tag: v6.3.0, origin/HEAD, origin/6.4, origin/6.3)
+
+Christian Flothmann (14):
+      2014-08-07 18:04:04 | 947f5cd | remove volatile tests (tag: v2.3.19)
+      2015-05-01 17:06:45 | 06c3009 | link to https://symfony.com where possible (tag: v2.3.30, tag: v2.3.29, tag: v2.3.28)
+      2017-04-12 09:19:06 | 1ceca83 | fail when detecting risky tests (tag: v2.7.34, tag: v2.7.33, tag: v2.7.32, tag: v2.7.31, tag: v2.7.30, tag: v2.7.29, tag: v2.7.28, tag: v2.7.27)
+      2017-07-03 11:16:04 | 0a9eecc | add changelog entry for Stopwatch::reset()
+      2019-01-01 16:42:07 | af55d31 | update year in license files (tag: v3.4.21)
+      2019-01-03 12:05:57 | 6aae163 | Merge branch '3.4' into 4.1 (tag: v4.1.10)
+      2019-01-03 12:07:35 | af62b35 | Merge branch '4.1' into 4.2 (tag: v4.2.2)
+      2019-01-03 12:16:58 | 950e4c7 | Merge branch '4.2'
+      2019-07-13 17:54:04 | 1a47dd8 | remove deprecated features
+      2019-07-27 21:05:40 | 8535835 | add parameter type declarations to private methods
+      2021-07-10 11:24:26 | c85d997 | clean up remaining event mocks (tag: v4.4.27)
+      2021-07-10 11:55:45 | 2474439 | Merge branch '4.4' into 5.2 (tag: v5.2.12, origin/5.2)
+      2021-07-10 11:58:57 | b24c6a9 | Merge branch '5.2' into 5.3 (tag: v5.3.4)
+      2021-07-10 12:03:07 | 76f2bce | Merge branch '5.4' into 6.0
+
+Alexander M. Turek (8):
+      2019-09-08 00:12:27 | 27b6671 | Allow version 2 of the contracts package.
+      2019-09-25 13:08:54 | 8394ca2 | Add types to constructors and private/final/internal methods (Batch II)
+      2020-11-01 01:44:29 | c7a5941 | Set constant visibility in tests to private where possible. (tag: v4.4.18, tag: v4.4.17)
+      2020-11-01 18:43:26 | fcda7f1 | Merge branch '4.4' into 5.1 (tag: v5.1.9, tag: v5.1.10)
+      2020-11-01 19:14:45 | 2b105c0 | Merge branch '5.1' into 5.x (tag: v5.2.1, tag: v5.2.0-RC2, tag: v5.2.0-RC1, tag: v5.2.0)
+      2021-07-19 01:29:58 | f353d45 | [Stopwatch] Add types to private properties
+      2021-11-23 01:12:26 | 208ef96 | Allow v3 contracts where possible (tag: v5.4.0-RC1, tag: v5.4.0)
+      2022-12-28 17:47:09 | 569c041 | Drop v1 contracts packages everywhere
+
+Tobias Schultze (8):
+      2013-11-10 21:06:47 | b43d5cc | unify constructor initialization style throughout symfony (tag: v2.4.0-RC1, tag: v2.4.0)
+      2014-06-20 23:32:40 | dab909a | Use PSR-4 everywhere instead of PSR-0
+      2019-07-28 23:46:51 | 4289aba | [Stopwatch] fix some phpdocs
+      2019-07-29 19:04:53 | d6c58dc | Merge branch '3.4' into 4.3
+      2019-07-29 19:17:34 | d73b9f4 | Merge branch '4.3' into 4.4
+      2019-07-29 19:20:37 | e6d0244 | Merge branch '4.4'
+      2019-07-28 19:16:24 | 3891150 | [Stopwatch] fix wrong nullable type
+      2020-03-26 00:25:16 | e0324d3 | add missing gitattributes for phpunit-bridge (tag: v4.4.8, tag: v4.4.7)
+
+Graham Campbell (5):
+      2014-11-30 16:33:44 | 5a77a54 | Docblock fixes
+      2014-12-02 22:42:47 | 23b96d2 | PSR-2 fixes (tag: v2.3.23)
+      2014-12-03 23:10:26 | 3143213 | CS fixes
+      2014-12-04 00:28:36 | ed34703 | [2.3] More cs fixes
+      2014-12-21 20:00:50 | 5185910 | [2.3] CS And DocBlock Fixes
+
+Jérémy Derussé (5):
+      2019-08-01 10:31:22 | e30be2e | Fix assertInternalType deprecation in phpunit 9
+      2019-08-02 01:48:42 | 6d2fe43 | Fix deprecated phpunit annotation
+      2019-08-02 20:02:27 | 81cde9e | Remove use of ForwardCompatTrait
+      2019-08-06 00:18:16 | 7c9dc0e | Use assertEqualsWithDelta when required
+      2019-08-06 12:10:43 | c0c27e3 | Fix remaining tests (tag: v3.4.33, tag: v3.4.32, tag: v3.4.31)
+
+Alexander Kotynia (3):
+      2013-04-12 18:28:00 | 468cc56 | [HttpKernel] Improve TraceableEventDispatcher to not call Stopwatch::stop() when not started
+      2013-04-17 00:54:58 | 1e92336 | [Stopwatch] Fix checking started events
+      2013-04-17 11:17:10 | 73ccb73 | [Stopwatch] Fix array definition from 5.4 (tag: v2.3.2, tag: v2.3.1, tag: v2.3.0)
+
+Bernhard Schussek (3):
+      2014-08-14 18:51:32 | 39b4d91 | Merge branch '2.3' into 2.4 (tag: v2.4.9)
+      2014-08-14 20:10:54 | 22ab4f7 | Merge branch '2.4' into 2.5 (tag: v2.5.4)
+      2014-08-14 20:37:29 | 1514a74 | Merge branch '2.5'
+
+Oskar Stark (3):
+      2017-09-28 09:42:58 | 81482e8 | removed useless PHPDoc (tag: v2.7.35)
+      2021-01-22 15:09:22 | c5572f6 | Use createMock() and use import instead of FQCN (tag: v4.4.20, tag: v4.4.19)
+      2022-12-14 17:42:16 | f83692c | Migrate to `static` data providers using `rector/rector` (tag: v5.4.21, origin/5.4)
+
+Christian Raue (2):
+      2014-07-06 13:04:43 | 459c50e | added XSD to PHPUnit configuration (tag: v2.3.17)
+      2014-07-07 14:13:42 | 26fdc20 | removed defaults from PHPUnit configuration (tag: v2.3.18)
+
+Jan Schädlich (2):
+      2019-07-06 17:12:52 | 016a96a | [Stopwatch] Deprecate passing null in Section::get() method.
+      2019-06-28 09:21:59 | 42a4284 | [Stopwatch] Add type-hints for Stopwatch and Section classes
+
+Javier Eguiluz (2):
+      2016-03-03 15:05:42 | 7db42ab | Updated all the README files (tag: v2.3.42, tag: v2.3.41, tag: v2.3.40, tag: v2.3.39, origin/2.3)
+      2017-06-19 12:42:01 | 052ff63 | Add support for microseconds in Stopwatch
+
+Luis Cordova (2):
+      2013-12-04 22:44:44 | 36061b0 | raising delta on stopwatch as travis really breaks with less than 35 (tag: v2.3.9, tag: v2.3.8)
+      2014-01-07 02:25:20 | 2264a17 | update year on licenses
+
+Timo Bakx (2):
+      2019-10-29 23:16:34 | 6300e79 | [Stopwatch] Fixed bug in getDuration when counting multiple ongoing periods
+      2019-10-29 22:29:12 | ca2cc9f | [Stopwatch] Fixed a bug in stopwatch event getStartTime
+
+Wouter de Jong (2):
+      2020-10-04 15:01:13 | 7192e97 | Added Stopwatch example to the README
+      2023-02-13 01:57:18 | 2e69499 | Add void return types
+
+jochenvdv (2):
+      2014-02-04 03:11:49 | a521211 | Include running periods in duration
+      2014-02-04 15:05:45 | 2999261 | Allow retrieving unstopped stopwatch events
+
+umpirsky (2):
+      2014-05-02 21:35:41 | 72381ed | Added retrieval of sections
+      2014-06-06 14:36:27 | 8f53219 | Added return type to Stopwatch::getSections()
+
+Abdellatif Ait boudad (1):
+      2015-07-01 17:16:54 | 9a3dca4 | Merge remote-tracking branch 'origin/2.7' into 2.8
+
+Ahmed Raafat (1):
+      2020-08-11 12:37:24 | 0d427e5 | Add name property to the stopwatchEvent
+
+Anne-Sophie Bachelard (1):
+      2015-10-30 22:48:51 | 1cea29c | added the new Composer exclude-from-classmap option
+
+Brikou Carré (1):
+      2013-10-11 12:49:11 | 6c5af2c | Make usleep longer and simplify assertions (tag: v2.2.11, tag: v2.2.10, origin/2.2)
+
+Christophe Coevoet (1):
+      2018-07-05 14:24:53 | 12a4b0c | Enable the fixer enforcing fully-qualified calls for compiler-optimized functions (tag: v2.8.46, tag: v2.8.45, tag: v2.8.44)
+
+Damien Alexandre (1):
+      2014-11-29 14:05:04 | cc922e5 | [Stopwatch] added __toString on StopwatchEvent
+
+Dariusz Ruminski (1):
+      2015-03-21 13:51:07 | e6ec4f7 | CS: Convert double quotes to single quotes (tag: v2.3.27)
+
+David Fuhr (1):
+      2014-11-29 14:55:00 | e9d824a | Adjust error_reporting to allow deprecation messages for 3.0
+
+David Prévot (1):
+      2018-07-09 06:43:47 | fac2fa7 | Use an empty string as default for assertEquals
+
+Diego Saint Esteben (1):
+      2016-01-02 03:11:38 | 594d069 | Update copyright year (tag: v2.3.38, tag: v2.3.37)
+
+Evgeniy Sokolov (1):
+      2015-09-10 01:21:50 | 5b08e93 | Tests fix clockmock
+
+Florin Patan (1):
+      2012-11-10 00:03:11 | 4a8a54e | Fixed the lap method. Added upgrade notes. Some CS fixes
+
+Gabriel Caruso (1):
+      2018-10-02 06:12:00 | 27028ff | [CS] Enforces null type hint on last position in phpDocs (tag: v2.8.47)
+
+Gregor Harlan (1):
+      2017-07-16 21:35:34 | 97adcb4 | [Stopwatch] Fix precision for root section
+
+Grégoire Paris (1):
+      2018-11-11 14:11:22 | 752586c | Bump phpunit XSD version to 5.2 (tag: v2.8.52, tag: v2.8.50, tag: v2.8.49, tag: v2.8.48, origin/2.8)
+
+Hugo Hamon (1):
+      2014-12-21 19:36:15 | dd73709 | Fixes various phpdoc and coding standards. (tag: v2.3.25, tag: v2.3.24)
+
+Jan Rosier (1):
+      2020-01-01 14:03:25 | e2d9541 | Update year in license files (tag: v3.4.38, tag: v3.4.37)
+
+Jose Gonzalez (1):
+      2017-06-24 13:52:11 | e22402d | [Stopwatch] Add a reset method
+
+Krystian Marcisz (1):
+      2021-03-29 15:47:32 | d99310c | [Stopwatch] Document new "name" property of StopwatchEvent (tag: v5.3.0-BETA1, tag: v5.2.7)
+
+Kévin Dunglas (1):
+      2017-12-31 15:09:44 | 0e362b8 | Update LICENSE year... forever
+
+Lukas Kahwe Smith (1):
+      2018-02-17 17:55:25 | eb17cfa | updated StopwatchEvent phpdoc due to the additional of optional float precision introduced in 0db8d7fb6a5396f84f2907e5e595c114982772ff (tag: v3.4.9, tag: v3.4.8, tag: v3.4.7, tag: v3.4.6, tag: v3.4.5, tag: v3.4.13, tag: v3.4.12, tag: v3.4.11, tag: v3.4.10)
+
+Martin Hasoň (1):
+      2013-07-16 14:31:14 | 2333334 | Added missing files .gitignore (tag: v2.3.4, tag: v2.3.3)
+
+Michael Voříšek (1):
+      2021-10-03 18:40:55 | 68e61ec | Fix "can not" spelling (tag: v5.4.0-BETA1)
+
+Nyholm (1):
+      2019-09-05 18:26:55 | e1ebaed | Adding .gitattributes to remove Tests directory from "dist"
+
+Peter Gribanov (1):
+      2022-09-27 15:17:00 | 7576607 | Correct compare float data (tag: v4.4.46, origin/4.4)
+
+Peter Rehm (1):
+      2017-02-08 10:24:27 | b741b5b | Update to PHPUnit namespaces (tag: v2.7.26, tag: v2.7.25)
+
+Reedy (1):
+      2019-10-12 03:27:05 | 1c0f661 | Add .gitignore to .gitattributes
+
+Robin Chalas (1):
+      2021-10-11 19:08:10 | ead3eb0 | Merge branch '5.4' into 6.0 (tag: v6.0.0-BETA1)
+
+Samuel NELA (1):
+      2018-12-25 03:54:22 | e7dcd07 | [Stopwatch] Fixed phpdoc for category name
+
+Saro0h (1):
+      2015-01-01 03:12:43 | 501381f | Updated copyright to 2015
+
+Thomas Calvet (1):
+      2022-02-18 18:34:20 | 7f4f5a8 | [Stopwatch] Fix test expectation (tag: v4.4.38)
+
+Thomas Landauer (1):
+      2020-07-29 18:44:23 | 12de0e8 | Update StopwatchPeriod.php
+
+Victor Berchet (1):
+      2012-11-10 19:55:34 | 37c1f8d | [Stopwatch] Get the "real size" used & minor tweaks
+
+Vladimir Reznichenko (1):
+      2015-05-29 20:14:48 | 86c6cc6 | Php Inspections (EA Extended):     - resolved possible PHP Fatal in \Symfony\Component\BrowserKit\Cookie::__toString     -resolved implicit magic methods calls     -resolved callable name case mismatches
+
+Yonel Ceruto (1):
+      2019-07-08 15:57:32 | 5c288f8 | Fix missing deprecations
+
+sarah khalil (1):
+      2014-12-18 22:00:19 | 1d1464d | [Tests] Silenced all deprecations in tests for 2.3
+
